@@ -4,4 +4,5 @@
 # OCCURENCE_NUMBER IP HTTP_CODE
 # greatest to the lowest number of occurrences
 
-awk '{ print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
+log_file="apache-access.log"
+awk '{ print $1, $9}' "$log_file" | sort | uniq -c | sort -rn
