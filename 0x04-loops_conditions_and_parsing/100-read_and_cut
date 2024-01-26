@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # displays the content of the file /etc/passwd
-# script only display:
+# script only displays:
 # username
 # user id
 # Home directory path for the user
 
 file_path="/etc/passwd"
-while read -r line; do
-    echo $line | cut -d ':' -f1,3,6
+while IFS=':' read -r username _ uid _ _ homedir _; do
+    echo "$username:$uid:$homedir"
 done < "$file_path"
