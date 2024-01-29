@@ -3,7 +3,8 @@
 # In between every I am alive! message,
 # the program should pause for 2 second
 
-while true; do
-    echo "I am alive!" >> /tmp/my_process
-    sleep 2
+while true
+do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
 done
