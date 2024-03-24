@@ -79,14 +79,15 @@ Save and exit the editor:
 In vi, type :wq and press Enter to save and exit.
 In emacs, type C-x C-s C-x C-c to save and exit.
 
-## Notes (task 3)
+## Notes (Task 3)
 
-### issues logging into server?
+### Having Trouble Logging Into the Server?
+If you're having trouble logging in, here's what you should do:
 
-* check that you private key path is correct ( eg for ~/.ssh/school) cd ~/.ssh ,ls and check if school file is there
-* check if public key in the intranet matches that private key (cat ~/ssh/school.pub) this this be identical to whats on your intranet profile
-* if you decide to use the public key generated from previous project(~/.ssh/id_rsa_pub) login with the corresponding private key id_rsa
-* check permissions. The .ssh directory restrictive permissions (700), and the private_key_file  permissions set to 600.
-* check ssh_config file and set the correct permmissions
-* to number your authorised keys in vi (ect ,type set number)
-* remember to edit authorised_keys with sudo permission
+* Check Your Private Key Path: Make sure the path to your private key is correct. You can do this by navigating to the .ssh directory (cd ~/.ssh) and checking if the school file is there.
+* Verify Public Key Matching: Check if the public key on your computer matches the private key you're using. You can do this by typing cat ~/ssh/school.pub. It should be identical to what's on your profile.
+* Using Previous Public Key: If you've used a public key from a previous project (~/.ssh/id_rsa_pub), log in with the corresponding private key id_rsa.
+* Check Permissions: Ensure that the .ssh directory has restrictive permissions (700) and that the private key file has permissions set to 600.
+* Review SSH Configuration: Take a look at the ssh_config file and make sure the permissions are set correctly.
+* Number Authorized Keys in Vi: If you need to number your authorized keys in vi, type set number in the editor.
+* Edit authorized_keys with sudo Permission: Remember to edit the authorized_keys file with sudo permission if necessary.
