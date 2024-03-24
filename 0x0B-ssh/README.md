@@ -3,7 +3,7 @@
 ## What is a server?
 A server is a computer program or device that provides functionality to other programs or devices, known as clients, in a network. Servers can provide various services such as file storage, email hosting, website hosting, or database management, among others.
 
-## Where do you find it:
+## Where do you find it?
 Servers are typically housed in data centers or server rooms with controlled environments optimized for their operation. These locations provide appropriate cooling, power supply, and security measures to ensure the servers' smooth functioning.
 
 ## What is SSH?
@@ -73,11 +73,11 @@ sudo vi ~/.ssh/authorized_keys
 ```
 
 Paste the copied public key into the file:
-Press Ctrl + Shift + V to paste the contents into the editor.
+* Press Ctrl + Shift + V to paste the contents into the editor.
 
 Save and exit the editor:
-In vi, type :wq and press Enter to save and exit.
-In emacs, type C-x C-s C-x C-c to save and exit.
+* In vi, type :wq and press Enter to save and exit.
+* In emacs, type C-x C-s C-x C-c to save and exit.
 
 ## Notes (Task 3)
 
