@@ -33,12 +33,12 @@ Replace /path/to/private_key with the path to your private key file, username wi
 ## SSH config:
 The ssh_config file typically contains configuration options for SSH client behavior. Some common configurations include:
 
-Host: Specifies options for a particular host. You can define multiple host blocks with different configurations.
-Hostname: Specifies the hostname or IP address of the remote host.
-User: Specifies the username to use when connecting to the remote host.
-IdentityFile: Specifies the path to the private key file to use for authentication.
-Port: Specifies the port number to connect to on the remote host.
-ForwardAgent: Enables SSH agent forwarding, allowing authentication to be passed through to remote hosts.
+* Host: Specifies options for a particular host. You can define multiple host blocks with different configurations.
+* Hostname: Specifies the hostname or IP address of the remote host.
+* User: Specifies the username to use when connecting to the remote host.
+* IdentityFile: Specifies the path to the private key file to use for authentication.
+* Port: Specifies the port number to connect to on the remote host.
+* ForwardAgent: Enables SSH agent forwarding, allowing authentication to be passed through to remote hosts.
 
 
 ## How to add a public key to authorized keys:
@@ -48,29 +48,29 @@ To add a public key to the authorized_keys file on the remote host, you can manu
 
 Log into the server using password authentication:
 
-'''
+```
 ssh -i /path/to/private_key username@hostname
-'''
+```
 
 Once logged in, use the following command to append the public key to the authorized_keys file:
 
-'''
+```
 echo "PASTE_YOUR_PUBLIC_KEY_HERE" >> ~/.ssh/authorized_keys
-'''
+```
 
 ### method_2
 
 Log into the server using password authentication:
 
-'''
+```
 ssh -i /path/to/private_key username@hostname
-'''
+```
 
 Once logged in, use the following command to append the public key to the authorized_keys file:
 
-'''
+```
 sudo vi ~/.ssh/authorized_keys
-'''
+```
 
 Paste the copied public key into the file:
 Press Ctrl + Shift + V to paste the contents into the editor.
@@ -81,7 +81,6 @@ In emacs, type C-x C-s C-x C-c to save and exit.
 
 ## Notes (task 3)
 
-* to number your authorised keys in vi (ect ,type set number)
 ### issues logging into server?
 
 * check that you private key path is correct ( eg for ~/.ssh/school) cd ~/.ssh ,ls and check if school file is there
