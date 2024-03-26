@@ -1,15 +1,19 @@
-# Connect to a server without typing a password
-# Configure using the private key ~/.ssh/school
-# Refuse to authenticate using a password
+# Puppet manifest configures /etc/ssh/ssh_config file according to requirements
 
+include stdlib
 
-$ssh_config_content = '
-Host *
-    PasswordAuthentication no
-    IdentityFile ~/.ssh/school
-'
+file_line { 'Turn off passwd auth':
+  path               => '/etc/ssh/ssh_config',
+  line               => '    IdentityFile ~/.ssh/school',
+  match              => '^[#]+[\s]*(?i)IdentityFile[\s]+~/.ssh/id_rsa$',
+  replace            => true,
+  append_on_no_match => true
+}
 
-file { 'ssh_config':
-  path    => '/etc/ssh/ssh_config',
-  content => $ssh_config_content,
+file_line { 'Declare identity file':
+  path               => '/etc/ssh/ssh_config',
+  line               => '    PasswordAuthentication no',
+  match              => '^[#]+[\s]*(?i)PasswordAuthentication[\s]+(yes|no)$',
+  replace            => true,
+  append_on_no_match => true
 }
