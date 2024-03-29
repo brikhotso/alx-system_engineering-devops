@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# configures a brand new Ubuntu machine as per requirements
+# shellcheck disable=SC2154
