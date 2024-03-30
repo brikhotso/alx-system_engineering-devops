@@ -17,7 +17,7 @@ nginx::resource::vhost { 'default':
     },
   },
   custom_config => {
-    'add_header X-Served-By' => '$hostname',
+    'add_header X-Served-By' => $facts['hostname'],
   },
 }
 
