@@ -1,7 +1,11 @@
 # Puppet manifest to install nginx with custom HTTP header
 
+exec {'update':
+  command => '/usr/bin/apt-get update',
+}
+
 package { 'nginx':
-  ensure => installed,
+  ensure => present,
 }
 
 file_line { 'nginx_redirection':
