@@ -1,6 +1,6 @@
 # Puppet manifest to install nginx with custom HTTP header
 
-exec {'update':
+exec { 'update':
   command => '/usr/bin/apt-get update',
 }
 
@@ -16,11 +16,11 @@ file_line { 'nginx_redirection':
 }
 
 file_line { 'header':
-  ensure  => 'present',
-  path    => '/etc/nginx/sites-available/default',
-  after   => 'listen 80 default_server;',
-  line    => 'add_header X-Served-By $HOSTNAME;',
-  require => Package['nginx'],
+  ensure => 'present',
+  path   => '/etc/nginx/nginx.conf',
+  after  => 'listen 80 default_server;',
+  match  => 'http {',
+  line   => "add_header X-Served-By \"${hostname}\";",
 }
 
 file { '/var/www/html/index.html':
