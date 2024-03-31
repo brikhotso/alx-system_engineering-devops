@@ -1,4 +1,4 @@
-**Load balancer**
+# Load balancer
 
 This document provides instructions for setting up a load-balanced environment with two web servers using Nginx as the web server software and HAProxy as the load balancer. Additionally, it covers setting up HTTP responses with custom headers on both servers and configuring the second server using Puppet.
 
