@@ -1,6 +1,6 @@
-0x07. Networking basics #0
+# 0x07. Networking basics #0
 
-0-OSI_model
+## 0-OSI_model
 
 What is the OSI model?
 
@@ -12,7 +12,7 @@ Alphabetically
 From the lowest to the highest level
 Randomly
 
-1-types_of_network
+## 1-types_of_network
 
 What type of network a computer in local is connected to?
 Internet
@@ -27,7 +27,7 @@ Internet
 WAN
 LAN
 
-2-MAC_and_IP_address
+## 2-MAC_and_IP_address
 
 What is a MAC address?
 The name of a network interface
@@ -38,7 +38,7 @@ Is to devices connected to a network what postal address is to houses
 The unique identifier of a network interface
 Is a number that network devices use to connect to networks
 
-3-UDP_and_TCP
+## 3-UDP_and_TCP
 
 Which statement is correct for the TCP box:
 It is a protocol that is transferring data in a slow way but surely
@@ -51,13 +51,13 @@ Have you received boxes x, y, z?
 May I increase the rate at which I am sending you boxes?
 
 
-4-TCP_and_UDP_ports
+## 4-TCP_and_UDP_ports
 
 Write a Bash script that displays listening ports:
 That only shows listening sockets
 That shows the PID and name of the program to which each socket belongs
 
-5-is_the_host_on_the_network
+## 5-is_the_host_on_the_network
 
 Write a Bash script that pings an IP address passed as an argument.
 Requirements:
