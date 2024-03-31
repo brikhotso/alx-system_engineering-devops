@@ -5,13 +5,13 @@ This document provides instructions for setting up a load-balanced environment w
 ### Setting Up Two Web Servers with Nginx
 
 1. **Install Nginx on both servers**:
-   - Access each server individually via SSH or another remote access method using its IP address. Once logged in, run the commands to install Nginx.
+   - Access each server individually via SSH using its IP address. Once logged in, run the commands to install Nginx.
    - After logging in, update the package index and install Nginx:
      ```bash
      sudo apt update
      sudo apt install nginx
      ```
-   - Repeat this process for each server.
+   - Repeat this process for each server(write a bash script to automate your work.
 
 2. **Configure custom HTTP response headers**:
    - After installing Nginx, configure custom HTTP response headers by editing the Nginx configuration files.
