@@ -1,4 +1,4 @@
-# Puppet manifest to install nginx with custom HTTP header
+# Puppet manifest to install nginx on web server with custom HTTP header
 
 exec {'update':
   command => '/usr/bin/apt-get update',
