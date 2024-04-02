@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# check why Ubuntu container’s Nginx installation is notlistening on port 80
