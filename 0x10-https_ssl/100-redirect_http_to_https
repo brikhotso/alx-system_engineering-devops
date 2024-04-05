@@ -36,16 +36,14 @@ defaults
 frontend http_front
     bind *:80
     mode http
-    option forwardfor
-    reqadd X-Forwarded-Proto:\ http
-
-    redirect scheme https code 301 if !{ ssl_fc }
+    http-request set-header X-Forwarded-Proto http
+    default_backend my_backend
 
 frontend my_frontend_https
     bind *:443 ssl crt /etc/haproxy/certs/www.brendarikhotso.tech.pem
     http-request set-header X-Forwarded-Proto https
-    option forwardfor
-    reqadd X-Forwarded-Proto:\ https
+    http-request redirect scheme https code 301 unless { ssl_fc }
+    default_backend my_backend
 
 backend my_backend
     balance roundrobin
