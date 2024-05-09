@@ -16,7 +16,7 @@ def number_of_subscribers(subreddit):
         int: The number of subscribers for the subreddit.
              Returns 0 if the subreddit doesn't exist.
     """
-    headers = {'User-Agent': 'Linux:0x16.api.advanced::v1.0.0 (by /u/brikhotso)'}
+    headers = {'User-Agent': 'myUniBotAgent/0.2'}
     response = requests.get('https://www.reddit.com/r/{}/about.json'
                             .format(subreddit), headers=headers,
                             allow_redirects=False)
