@@ -20,7 +20,7 @@ def top_ten(subreddit):
                             .format(subreddit), headers=headers,
                             allow_redirects=False)
 
-    if response.status_code == 200:
+    if response.status_code == 200 and response.text.strip():
         data = response.json().get('data')
         if data:
             children = data.get('children')
