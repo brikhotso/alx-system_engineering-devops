@@ -1,13 +1,7 @@
-## Concepts
-For this project, we expect you to look at this concept
-- [On call](https://intranet.alxswe.com/concepts/39)
-
-## About
+## Postmortem
 An incident report postmortem is a retrospective analysis of a specific incident or problem that occurred in a system, service, or organization. The goal of the postmortem is to identify the root cause of the incident, to document the findings, and to develop recommendations for preventing similar incidents in the future.
 
 ## Background context
-
-[![incident-report](https://img.youtube.com/vi/rp5cVMNmbro/0.jpg)](https://www.youtube.com/watch?v=rp5cVMNmbro "Incident Report")
 
 Any software system will eventually fail, and that failure can come stem from a wide range of possible factors: bugs, traffic spikes, security issues, hardware failures, natural disasters, human error… Failing is normal and failing is actually a great opportunity to learn and improve. Any great Software Engineer must learn from his/her mistakes to make sure that they won’t happen again. Failing is fine, but failing twice because of the same issue is not.
 
