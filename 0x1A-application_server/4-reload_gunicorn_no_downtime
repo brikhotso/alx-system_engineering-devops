@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
 # This script will gracefully reload Gunicorn
 
-# Get the PIDs of the Gunicorn master processes
-master_pids=$(pgrep -f 'gunicorn --bind')
-
-# If Gunicorn is running, send the HUP signal to each master process
-if [ -n "$master_pids" ]; then
-    for pid in $master_pids; do
-	kill -HUP "$pid"
-    done
-fi
+sudo pkill -HUP -f gunicorn.*master
